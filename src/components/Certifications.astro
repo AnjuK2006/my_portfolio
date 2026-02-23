@@ -1,0 +1,39 @@
+---
+import { siteConfig } from "../config";
+
+const hasCertifications =
+  siteConfig.certifications && siteConfig.certifications.length > 0;
+---
+
+{hasCertifications && (
+  <section
+    id="certifications"
+    class="scroll-mt-28 pt-32 p-8 sm:p-12 md:p-16 lg:p-24"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <!-- Heading -->
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+          Certifications
+        </h2>
+        <div
+          class="w-[75px] h-[5px] mt-2 rounded-full"
+          style={`background-color: ${siteConfig.accentColor}`}
+        />
+      </div>
+
+      <!-- ONE BOX WITH BULLETS -->
+      <div class="lg:col-span-8 lg:mt-28">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-8">
+          <ul class="list-disc list-inside space-y-4 text-lg text-gray-700">
+            {siteConfig.certifications.map((cert) => (
+              <li>{cert}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+)}

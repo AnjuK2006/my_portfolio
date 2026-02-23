@@ -1,0 +1,41 @@
+---
+import { siteConfig } from "../config";
+---
+
+<div
+  id="hero"
+  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
+  <!-- Gradient overlay -->
+  <div
+    class="absolute inset-0 -z-10"
+    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+  ></div>
+
+  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center gap-12">
+    
+    <!-- PROFILE PHOTO -->
+    <img
+      src={siteConfig.profileImage}
+      alt="Anju K"
+      class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover border-4 shadow-lg"
+      style={`border-color: ${siteConfig.accentColor}`}
+    />
+
+    <!-- TEXT CONTENT -->
+    <div>
+      <h2 class="text-xl sm:text-2xl md:text-5xl font-bold text-gray-700 animate-fade-in">
+        Hello! 👋
+      </h2>
+
+      <h1 class="mt-6 md:mt-10 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-gray-800 animate-fade-in animation-delay-200">
+        I'm <span style={`color: ${siteConfig.accentColor}`}>{siteConfig.name}</span>
+      </h1>
+
+      <p class="mt-4 md:mt-8 text-base sm:text-lg md:text-xl font-medium text-gray-600 animate-fade-in animation-delay-400">
+        {siteConfig.title}
+      </p>
+    </div>
+  </div>
+</div>
