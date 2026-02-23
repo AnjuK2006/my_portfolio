@@ -14,14 +14,18 @@ import { siteConfig } from "../config";
   ></div>
 
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center gap-12">
-    
-    <!-- PROFILE PHOTO -->
-    <img
-      src={siteConfig.profileImage}
-      alt="Anju K"
-      class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover border-4 shadow-lg"
-      style={`border-color: ${siteConfig.accentColor}`}
-    />
+
+    <!-- PROFILE PHOTO WRAPPER -->
+    <div
+      class="rounded-full border-4 shadow-lg overflow-hidden"
+      style={`width: 14rem; height: 14rem; border-color: ${siteConfig.accentColor};`}
+    >
+      <img
+        src={siteConfig.profileImage}
+        alt={siteConfig.name}
+        class="w-full h-full object-cover"
+      />
+    </div>
 
     <!-- TEXT CONTENT -->
     <div>

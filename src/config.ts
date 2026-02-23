@@ -4,7 +4,7 @@ export const siteConfig = {
   description: "Portfolio website of Anju K, CSE student and aspiring software engineer",
   accentColor: "#1dd884",
 
-  profileImage: "public/images/anju.jpg",
+  profileImage: "/images/anju.jpg",
 
   social: {
     email: "anjukalairajan@gmail.com",
